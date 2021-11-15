@@ -15,5 +15,7 @@ namespace SalesWebMVC.Data
         }
 
         public DbSet<SalesWebMVC.Models.Department> Department { get; set; }
+
+        public DbSet<SalesWebMVC.Models.Employee> Employee { get; set; }
     }
 }
