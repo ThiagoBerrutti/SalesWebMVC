@@ -5,18 +5,51 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<h4>Name</h4>
-<p>@Model.Name</p>
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
 
-<h4>Id</h4>
-<p>@Model.Id</p>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
 
-<h4>Department</h4>
-<p>@Model.Department.Name</p>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
 
-<h4>Birth date</h4>
-<p>@Model.BirthDate</p>
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseSalary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd> 
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+    </dl>
+</div>
 
+<div>
+    <a class="btn btn-default" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a class="btn" asp-action="Index">Back to List</a>
+</div>
 
 
 
