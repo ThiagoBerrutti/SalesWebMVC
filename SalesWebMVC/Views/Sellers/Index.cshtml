@@ -28,6 +28,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.BaseSalary)
             </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+
             <th>
 
             </th>
@@ -49,7 +54,10 @@
                         @Html.DisplayFor(i =>item.BirthDate)
                     </td>
                     <td>
-                       R$ @Html.DisplayFor(i =>item.BaseSalary)
+                       R$ @Html.DisplayFor(i => item.BaseSalary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(i=>item.Department.Name)
                     </td>
 
                     <td>
