@@ -1,7 +1,8 @@
 ﻿@model SalesWebMVC.Models.ViewModels.SellerFormViewModel;
-
+@using System.ComponentModel.DataAnnotations;
 
 @{
+   
     ViewData["Title"] = "Create";
 }
 
@@ -26,8 +27,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="Seller.BirthDate" class="control-label">Birth date</label>
-                <input asp-for="Seller.BirthDate" class="form-control" />
-                <span asp-validation-for="Seller.BirthDate" class="text-danger"></span>
+                <input asp-for="Seller.BirthDate" class="form-control" asp-format="dd-MM-yyyy" type="date" min="@DateTime.Now.AddYears(-100).ToString("yyyy-MM-dd")" max="@DateTime.Now.AddYears(-18).ToString("yyyy-MM-dd")" />                <span asp-validation-for="Seller.BirthDate" class="text-danger"></span>
+                <span asp-validation-for="Seller.BirthDate" class="text-danger" ></span>
 
             </div>
             <div class="form-group">

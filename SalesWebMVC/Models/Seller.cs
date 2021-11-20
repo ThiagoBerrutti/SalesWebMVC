@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalesWebMVC.Models.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace SalesWebMVC.Models
         [Display(Name = "Birth date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [AgeValidation(19, ErrorMessage = "{0} must be {1} or older")]
         public DateTime BirthDate { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
